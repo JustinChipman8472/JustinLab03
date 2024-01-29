@@ -1,5 +1,6 @@
 package com.example.simpleviews1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         { //anonymous class
             //implement your event handler method
             public void onClick(View v) {
-                DisplayToast("You have clicked the Open button");
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage();
+
             }
         });
 
