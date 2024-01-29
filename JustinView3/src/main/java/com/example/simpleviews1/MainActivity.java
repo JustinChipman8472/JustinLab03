@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+import android.content.DialogInterface;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         { //anonymous class
             //implement your event handler method
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage();
+
 
             }
         });
@@ -94,4 +94,35 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), msg,
                 Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        // create logo
+        builder.setIcon(R.drawable.home_logo);
+        // create title
+        builder.setTitle("JustinLab3");
+        // set message
+        builder.setMessage("Do you want to exit the app?");
+        // add functionality for yes
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked Yes button
+                finish(); // This will close the current activity and exit the app
+            }
+        });
+        // add functionality for no
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked No button
+                dialog.dismiss();
+            }
+        });
+
+        builder.setCancelable(false);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }
