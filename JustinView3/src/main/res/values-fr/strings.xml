@@ -9,4 +9,13 @@
     <string name="open_msg">Vous avez cliqué sur le bouton Ouvrir</string>
     <string name="yes">oui</string>
     <string name="no">non</string>
+    <string name="checked_true">CheckBox est coché</string>
+    <string name="checked_false">CheckBox n\'est pas coché</string>
+    <string name="opt1_checked">Option 1 cochée !</string>
+    <string name="opt2_checked">Option 2 checked!</string>
+    <string name="toggle_on">Le bouton bascule est activé</string>
+    <string name="toggle_off">Le bouton bascule est désactivé</string>
+    <string name="save_msg">Vous avez cliqué sur le bouton Enregistrer1</string>
+    <string name="switch_on">L\'interrupteur est allumé</string>
+    <string name="switch_off">L\'interrupteur est éteint</string>
 </resources>

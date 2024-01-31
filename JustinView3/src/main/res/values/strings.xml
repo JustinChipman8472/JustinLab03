@@ -16,11 +16,11 @@
     <string name="opt2_checked">Option 2 checked!</string>
     <string name="toggle_on">Toggle button is On</string>
     <string name="toggle_off">Toggle button is Off</string>
-    <string name="save_msg">You have clicked the Save button1</string>
-    <string name="Name">"Justin Chipman: "</string>
-    <string name="alphabet">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="save_msg">You have clicked the Save button!</string>
+    <string name="Name" translatable="false">"Justin Chipman: "</string>
+    <string name="alphabet" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="switch_on">Switch is ON</string>
     <string name="switch_off">Switch is OFF</string>
-    <string name="tag">MainActivity</string>
-    <string name="name_studentnum">Justin Chipman - n01598472</string>
+    <string name="tag" translatable="false">MainActivity</string>
+    <string name="name_studentnum" translatable="false">Justin Chipman - n01598472</string>
 </resources>
