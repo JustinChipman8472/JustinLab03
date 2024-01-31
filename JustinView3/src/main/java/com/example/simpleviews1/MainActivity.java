@@ -15,6 +15,7 @@ import android.content.DialogInterface;
 import android.provider.Settings;
 import android.content.Intent;
 import android.widget.ImageButton;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,16 +72,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-		/*
+
 		//---Button view---
 		Button btnSave = (Button) findViewById(R.id.btnSave);
 		btnSave.setOnClickListener(new View.OnClickListener()
 		{
 			public void onClick(View v) {
-				DisplayToast("You have clicked the Save button");
+                String url = "https://www.netflix.com";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
 			}
 		});
-        */
+
 
         //---CheckBox---
         CheckBox checkBox = (CheckBox) findViewById(R.id.chkAutosave);
