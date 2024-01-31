@@ -2,7 +2,9 @@ package com.example.simpleviews1;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,9 @@ import android.provider.Settings;
 import android.content.Intent;
 import android.widget.ImageButton;
 import android.net.Uri;
+import android.widget.Switch;
+import com.google.android.material.snackbar.Snackbar;
+import android.widget.CompoundButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +42,22 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //---Switch Button---
+        Switch switchButton = findViewById(R.id.switchButton);
+        switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Determine the message based on the switch state
+                int messageId = isChecked ? R.string.switch_on : R.string.switch_off;
+
+                // Create and display a Snackbar with the message
+                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content),
+                        getString(messageId),
+                        Snackbar.LENGTH_SHORT);
+                snackbar.show();
+            }
+        });
 
         //---imageButton view---
         ImageButton imageButton = findViewById(R.id.btnImg1);

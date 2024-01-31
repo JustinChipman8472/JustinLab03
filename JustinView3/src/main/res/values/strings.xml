@@ -19,4 +19,6 @@
     <string name="save_msg">You have clicked the Save button1</string>
     <string name="Name">"Justin Chipman: "</string>
     <string name="alphabet">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="switch_on">Switch is ON</string>
+    <string name="switch_off">Switch is OFF</string>
 </resources>
