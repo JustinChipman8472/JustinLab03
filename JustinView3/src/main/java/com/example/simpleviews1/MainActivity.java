@@ -21,6 +21,7 @@ import android.net.Uri;
 import android.widget.Switch;
 import com.google.android.material.snackbar.Snackbar;
 import android.widget.CompoundButton;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -149,11 +150,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void DisplayToast(String msg)
     {
+        // if there is already a toast display close it
         if(currentToast != null) {
             currentToast.cancel();
         }
+        // create toast
         currentToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+        // display toast
         currentToast.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Log the message when the app goes into the background
+        Log.d(getString(R.string.tag), getString(R.string.name_studentnum));
     }
 
     @Override

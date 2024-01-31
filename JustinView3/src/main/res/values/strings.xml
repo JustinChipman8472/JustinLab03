@@ -21,4 +21,6 @@
     <string name="alphabet">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="switch_on">Switch is ON</string>
     <string name="switch_off">Switch is OFF</string>
+    <string name="tag">MainActivity</string>
+    <string name="name_studentnum">Justin Chipman - n01598472</string>
 </resources>
