@@ -12,9 +12,12 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.content.DialogInterface;
+import android.provider.Settings;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toast currentToast;
     public void btnSaved_clicked (View view) {
         DisplayToast("You have clicked the Save button1");
     }
@@ -33,8 +36,13 @@ public class MainActivity extends AppCompatActivity {
         { //anonymous class
             //implement your event handler method
             public void onClick(View v) {
+                currentToast = DisplayToast(getString(R.string.open_msg));
 
 
+
+                // Launch the device settings screen
+                Intent intent = new Intent(Settings.ACTION_SETTINGS);
+                startActivity(intent);
             }
         });
 
@@ -101,18 +109,18 @@ public class MainActivity extends AppCompatActivity {
         // create logo
         builder.setIcon(R.drawable.home_logo);
         // create title
-        builder.setTitle("JustinLab3");
+        builder.setTitle(getString(R.string.app_name));
         // set message
-        builder.setMessage("Do you want to exit the app?");
+        builder.setMessage(getString(R.string.exit_msg));
         // add functionality for yes
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked Yes button
                 finish(); // This will close the current activity and exit the app
             }
         });
         // add functionality for no
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked No button
                 dialog.dismiss();

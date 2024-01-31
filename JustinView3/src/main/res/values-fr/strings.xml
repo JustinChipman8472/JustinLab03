@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JustinLab3</string>
+    <string name="hello">Bonjour tout le monde, JustinLab3Activity!</string>
+    <string name="save">Sauvegarder</string>
+    <string name="autosave">Sauvegarde automatique</string>
+    <string name="open">Ouvrir</string>
+    <string name="exit_msg">Voulez-vous quitter l\'application?</string>
+    <string name="open_msg">Vous avez cliqué sur le bouton Ouvrir</string>
+    <string name="yes">oui</string>
+    <string name="no">non</string>
+</resources>
