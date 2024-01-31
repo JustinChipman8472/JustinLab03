@@ -10,4 +10,12 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="hello">Hello World, JustinLab3Activity!</string>
+    <string name="checked_true">CheckBox is checked</string>
+    <string name="checked_false">CheckBox is unchecked</string>
+    <string name="opt1_checked">Option 1 checked!</string>
+    <string name="opt2_checked">Option 2 checked!</string>
+    <string name="toggle_on">Toggle button is On</string>
+    <string name="toggle_off">Toggle button is Off</string>
+    <string name="save_msg">You have clicked the Save button1</string>
+    <string name="Name">"Justin Chipman: "</string>
 </resources>
