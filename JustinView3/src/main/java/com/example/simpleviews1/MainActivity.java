@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         { //anonymous class
             //implement your event handler method
             public void onClick(View v) {
-                currentToast = DisplayToast(getString(R.string.open_msg));
-
-
-
+                // if there is a toast cancel it
+                if (currentToast != null) {
+                    currentToast.cancel();
+                }
                 // Launch the device settings screen
                 Intent intent = new Intent(Settings.ACTION_SETTINGS);
                 startActivity(intent);
@@ -99,8 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void DisplayToast(String msg)
     {
-        Toast.makeText(getBaseContext(), msg,
-                Toast.LENGTH_SHORT).show();
+        if(currentToast != null) {
+            currentToast.cancel();
+        }
+        currentToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+        currentToast.show();
     }
 
     @Override
